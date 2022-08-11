@@ -61,3 +61,109 @@ let bill = 275
 
 let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`) 
+
+
+//Part 2
+//Challenge 1
+
+let calcAverage = (score1, score2, score3) => {
+    let average = (score1 + score2 + score3) / 3
+    return average
+}
+
+function checkWinner(avgKoalas, avgDolphins) {
+    if (avgKoalas > (avgDolphins * 2)) {
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
+    } else if (avgDolphins > (avgKoalas * 2)) {
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`)
+    }
+} 
+
+//data set 1
+let dolphinsScore1 = 44
+let dolphinsScore2 = 23
+let dolphinsScore3 = 71
+
+let koalasScore1 = 44
+let koalasScore2 = 23
+let koalasScore3 = 71
+
+let teamDolphinsAvg = calcAverage(dolphinsScore1, dolphinsScore2, dolphinsScore3)
+let teamKoalasAvg = calcAverage(koalasScore1, koalasScore2, koalasScore3)
+
+checkWinner(teamKoalasAvg, teamDolphinsAvg)
+
+//data set 2
+dolphinsScore1 = 85
+dolphinsScore2 = 54
+dolphinsScore3 = 41
+
+koalasScore1 = 23
+koalasScore2 = 34
+koalasScore3 = 27
+
+teamDolphinsAvg = calcAverage(dolphinsScore1, dolphinsScore2, dolphinsScore3)
+teamKoalasAvg = calcAverage(koalasScore1, koalasScore2, koalasScore3)
+
+checkWinner(teamKoalasAvg, teamDolphinsAvg)
+
+//Part 2 Challenge 2
+let bills = [125, 55, 44]
+
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`) 
+
+function calcTip(bill) {
+    let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20
+    return tip
+}
+
+let tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[bills.length - 1])]
+console.log(tips)
+console.log(bills)
+
+let totalBills = [calcTip(bills[0]) + bills[0], calcTip(bills[1]) + bills[1], calcTip(bills[bills.length - 1]) + bills[bills.length - 1]]
+console.log(totalBills)
+
+//Part 3 Challenge 3
+const john = {
+   fullName: 'John Smith',
+   mass: 92,
+   height: 1.95,
+   calcBmi: function () {
+    this.BMI = this.mass / (this.height ** 2)
+    return this.BMI
+   }
+}
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 92,
+    height: 1.95,
+    calcBmi: function () {
+        this.BMI = this.mass / (this.height ** 2)
+        return this.BMI
+    }
+ }
+//  "John's BMI (28.3) is higher than Mark's (23.9)!"
+if(mark.calcBmi() > john.calcBmi()) {
+    console.log(`${mark.fullName}'s BMI (${mark.calcBmi()}) is higher than ${john.fullName}'s BMI (${john.calcBmi()})`)
+} else if (john.calcBmi() > mark.calcBmi()) {
+    console.log(`${john.fullName}'s BMI (${john.calcBmi()}) is higher than ${mark.fullName}'s BMI (${mark.calcBmi()})`)
+} else {
+    console.log(`${john.fullName}'s BMI (${john.calcBmi()}) is the same as ${mark.fullName}'s BMI (${mark.calcBmi()})`)
+}
+
+//Part 3 Challenge 4
+let billsArray = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+let tipsArray = []
+let totalBillsArray = []
+
+for(let i = 0; i < billsArray.length; i++) {
+    tipsArray.push(calcTip(billsArray[i])) 
+    totalBillsArray.push(tipsArray[i] + billsArray[i])
+}
+
+// console.log(billsArray)
+console.log(tipsArray)
+console.log(totalBillsArray)

@@ -1,3 +1,4 @@
+//Part 1
 // alert("Hello World!")
 // let js = 'amazing'
 // if(js === 'amazing') alert('JavaScript is FUN!')
@@ -46,3 +47,9 @@
 
 //use Babel to transpile and polyfill your code (converting back to ES5 to ensure browser compatibility for all users).
 
+//Part 2
+'use strict'
+let hasLicense = false
+const pass = true
+if (pass) hasLicense = true
+if(hasLicense) console.log("I can drive")
