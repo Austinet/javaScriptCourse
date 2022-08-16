@@ -53,3 +53,14 @@ let hasLicense = false
 const pass = true
 if (pass) hasLicense = true
 if(hasLicense) console.log("I can drive")
+
+// let dice = Math.trunc(Math.random() * 6) + 1
+
+//snippet
+// "Print to console": {
+//     "scope": "javascript, typescript",
+//     "prefix": "cl",
+//     "body": ["console.log()"],
+//     "description": "Log output to console"     
+// }
+

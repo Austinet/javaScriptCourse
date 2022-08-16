@@ -167,3 +167,33 @@ for(let i = 0; i < billsArray.length; i++) {
 // console.log(billsArray)
 console.log(tipsArray)
 console.log(totalBillsArray)
+
+
+//Bonus
+
+function calcArrayAverage(arr) {
+    let sum = 0;
+    arr.forEach(item => {
+        sum += item
+    });
+    return sum / arr.length
+}
+
+let newArray = [1, 2, 3]
+console.log("Average: " + calcArrayAverage(newArray))
+
+//Developer Skills & Editor Setup challenge
+
+function printForecast(arr) {
+    let tempString = '... '
+    for(let i = 0; i < arr.length; i++) {
+        tempString += `${arr[i]}ºC in ${i + 1} ${i + 1 < 2 ? 'day': 'days'} ... `      
+    }
+    console.log(tempString)
+}
+
+let arrarDataSet = [17, 21, 23]
+printForecast(arrarDataSet)
+
+arrarDataSet = [12, 5, -5, 0, 4]
+printForecast(arrarDataSet)
